@@ -1,13 +1,13 @@
 package com.safetyfirst.omte;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
@@ -34,7 +34,9 @@ public class SignInUpActivity extends AppCompatActivity {
 
     public void handleSignInSignUp(View view) {
         List<AuthUI.IdpConfig> provider = Arrays.asList(
-                new AuthUI.IdpConfig.EmailBuilder().build()
+                new AuthUI.IdpConfig.EmailBuilder().build(),
+                new AuthUI.IdpConfig.GoogleBuilder().build(),
+                new AuthUI.IdpConfig.PhoneBuilder().build()
         );
         Intent intent = AuthUI.getInstance()
                 .createSignInIntentBuilder()

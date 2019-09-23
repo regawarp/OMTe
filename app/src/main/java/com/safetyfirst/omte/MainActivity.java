@@ -15,12 +15,14 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.GetTokenResult;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FirebaseAuth.AuthStateListener {
 
     private TextView tvUserEmail, tvUserPhone;
 
@@ -42,15 +44,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-        //Jika belum ada autentikasi
-        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
-            startActivity(new Intent(this, SignInUpActivity.class));
-            this.finish();
-        } else {
-            tvUserEmail.setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());
-            tvUserPhone.setText(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber());
-        }
     }
 
     private void startLoginActivity() {
@@ -79,19 +72,39 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.action_logout:
                 Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
-                AuthUI.getInstance().signOut(this)
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    startLoginActivity();
-                                } else {
-                                    Log.e(MainActivity.class.getSimpleName(), "onComplete: ", task.getException());
-                                }
-                            }
-                        });
+                AuthUI.getInstance().signOut(this);
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseAuth.getInstance().addAuthStateListener(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        FirebaseAuth.getInstance().removeAuthStateListener(this);
+    }
+
+    @Override
+    public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+        if (firebaseAuth.getCurrentUser() == null) {
+            startLoginActivity();
+            return;
+        }
+        firebaseAuth.getCurrentUser().getIdToken(true)
+                .addOnSuccessListener(new OnSuccessListener<GetTokenResult>() {
+                    @Override
+                    public void onSuccess(GetTokenResult getTokenResult) {
+                        Log.d(MainActivity.class.getSimpleName(), "onSuccess: " + getTokenResult.getToken());
+                    }
+                });
+
+        tvUserEmail.setText(firebaseAuth.getCurrentUser().getEmail());
+        tvUserPhone.setText(firebaseAuth.getCurrentUser().getPhoneNumber());
     }
 }
