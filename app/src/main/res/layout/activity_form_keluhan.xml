@@ -10,7 +10,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/formkel_nama"/>
+        android:text="@string/formkel_nama"
+        />
 
     <EditText
         android:id="@+id/etNama"
@@ -22,18 +23,22 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/formkel_alamat"/>
+        android:text="@string/formkel_alamat"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/etAlamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Alamat" />
+        android:hint="Alamat"
+        style="@style/etStyle"
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/formkel_desc"/>
+        android:text="@string/formkel_desc"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:inputType="textMultiLine"
@@ -42,17 +47,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="vertical"
+        android:hint="Deskripsikan Keluhan Anda"
+        style="@style/etStyle"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/formkel_tag"/>
+        android:text="@string/formkel_tag"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/etTag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tag" />
+        android:hint="Tag"
+        style="@style/etStyle"/>
+
+    <Button
+        android:id="@+id/btnSubmitKeluhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnSubmitKeluhan"
+        style="@style/btnStyleBlue"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

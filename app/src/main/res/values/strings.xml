@@ -8,4 +8,5 @@
     <string name="formkel_alamat">Alamat</string>
     <string name="formkel_desc">Deskripsi Keluhan</string>
     <string name="formkel_tag">Tag</string>
+    <string name="btnSubmitKeluhan">Cari Teknisi</string>
 </resources>
