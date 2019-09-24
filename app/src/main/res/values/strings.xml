@@ -13,4 +13,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="layanan">Layanan</string>
+    <string name="reparasi_motor">Reparasi Motor</string>
+    <string name="beli_sparepart">Beli Sparepart</string>
+    <string name="teknisi_terdekat">Teknisi Terdekat</string>
+    <string name="show_all">Show All</string>
+    <string name="sparepart_terbaru">Sparepart Terbaru</string>
 </resources>
