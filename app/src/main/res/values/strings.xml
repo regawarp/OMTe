@@ -4,4 +4,8 @@
     <string name="app_logo">App Logo</string>
     <string name="sign_in_sign_up">Sign In / Sign Up</string>
     <string name="logout">Logout</string>
+    <string name="formkel_nama">Nama</string>
+    <string name="formkel_alamat">Alamat</string>
+    <string name="formkel_desc">Deskripsi Keluhan</string>
+    <string name="formkel_tag">Tag</string>
 </resources>
