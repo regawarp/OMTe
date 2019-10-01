@@ -8,6 +8,13 @@ public class Technician {
     private boolean techAvailability;
     private String techPicture;
 
+    public Technician() {
+    }
+
+    public Technician(String techId, String techName) {
+        this.techId = techId;
+        this.techName = techName;
+    }
 
     public String getTechId() {
         return techId;
