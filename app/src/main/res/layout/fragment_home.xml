@@ -15,8 +15,8 @@
         <LinearLayout
             android:id="@+id/slider"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@color/colorAccent"
+            android:layout_height="200dp"
+            android:background="@drawable/slide2"
             android:orientation="vertical" />
 
         <TextView
