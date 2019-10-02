@@ -15,8 +15,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomeActivity extends AppCompatActivity implements OrderFragment.OnFragmentInteractionListener, HomeFragment.OnFragmentInteractionListener, MoreFragment.OnFragmentInteractionListener {
+public class HomeActivity extends AppCompatActivity implements OrderFragment.OnFragmentInteractionListener {
     private TextView mTextMessage;
+    private EditText etSearch;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -54,6 +55,8 @@ public class HomeActivity extends AppCompatActivity implements OrderFragment.OnF
         setContentView(R.layout.activity_home);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        HomeFragment homeFragment = new HomeFragment();
+        openFragment(homeFragment);
     }
 
     @Override
@@ -61,7 +64,7 @@ public class HomeActivity extends AppCompatActivity implements OrderFragment.OnF
 
     }
 
-    public void setCustomActionBar(){
+    public void setCustomActionBar() {
         //Custom Action Bar
         androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
@@ -69,6 +72,17 @@ public class HomeActivity extends AppCompatActivity implements OrderFragment.OnF
         actionBar.setCustomView(R.layout.search_action_bar);
 
         View view = actionBar.getCustomView();
-        EditText etSearch = view.findViewById(R.id.et_search);
+        etSearch = view.findViewById(R.id.et_search);
+        etSearch.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_launcher_round, 0);
+        etSearch.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    etSearch.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                }else{
+                    etSearch.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_launcher_round, 0);
+                }
+            }
+        });
     }
 }

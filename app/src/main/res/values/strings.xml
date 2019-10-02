@@ -18,4 +18,10 @@
     <string name="formkel_desc">Deskripsi Keluhan</string>
     <string name="formkel_tag">Tag</string>
     <string name="btnSubmitKeluhan">Cari Teknisi</string>
+    <string name="layanan">Layanan</string>
+    <string name="reparasi_motor">Reparasi Motor</string>
+    <string name="beli_sparepart">Beli Sparepart</string>
+    <string name="teknisi_terdekat">Teknisi Terdekat</string>
+    <string name="show_all">Show All</string>
+    <string name="sparepart_terbaru">Sparepart Terbaru</string>
 </resources>
