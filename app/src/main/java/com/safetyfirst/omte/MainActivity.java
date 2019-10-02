@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import com.google.firebase.auth.GetTokenResult;
 public class MainActivity extends AppCompatActivity implements FirebaseAuth.AuthStateListener {
 
     private TextView tvUserEmail, tvUserPhone;
+    private Button btnCoba;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,18 @@ public class MainActivity extends AppCompatActivity implements FirebaseAuth.Auth
 
         tvUserEmail = findViewById(R.id.tvUserEmail);
         tvUserPhone = findViewById(R.id.tvUserPhone);
+
+//        INI MAH BUAT NYOBAIN AJA
+        btnCoba = findViewById(R.id.btnCoba);
+        btnCoba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,FormKeluhan.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

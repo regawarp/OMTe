@@ -13,6 +13,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="formkel_nama">Nama</string>
+    <string name="formkel_alamat">Alamat</string>
+    <string name="formkel_desc">Deskripsi Keluhan</string>
+    <string name="formkel_tag">Tag</string>
+    <string name="btnSubmitKeluhan">Cari Teknisi</string>
     <string name="layanan">Layanan</string>
     <string name="reparasi_motor">Reparasi Motor</string>
     <string name="beli_sparepart">Beli Sparepart</string>
