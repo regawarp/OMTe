@@ -11,6 +11,23 @@
     <string name="title_order">Order</string>
     <string name="title_more">More</string>
 
+    <string name="search">Search</string>
+    <string name="search_hint">Search</string>
+    <string name="button_to_chat">Button to Chat</string>
+    <string name="sub_fragment_order">Sub Fragment Order</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_title">Berikan Deskripsi Pelayanan</string>
+    <string name="input_rating">Input Rating</string>
+    <string name="price_detail">Detail Harga</string>
+    <string name="service_total">Total Servis</string>
+    <string name="check_up_cost">Biaya Pengecekan</string>
+    <string name="payment_method">Metode Pembayaran</string>
+    <string name="make_payment">Lakukan Pembayaran</string>
+    <string name="price_total">Total Harga</string>
+    <string name="order_name">Nama Pemesan</string>
+    <string name="order_complaint">Keluhan</string>
+    <string name="order_address">Alamat Pesanan</string>
+    <string name="order_tag">Tag</string>
 </resources>
