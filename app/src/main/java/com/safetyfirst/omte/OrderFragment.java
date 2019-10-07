@@ -68,6 +68,8 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
         imgButtonFinish.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
         imgButtonFinish.setOnClickListener(this);
         imgButtonOrder.setOnClickListener(this);
+        imgButtonService.setOnClickListener(this);
+//        imgButtonCheckUp.setOnClickListener(this);
     }
 
     public void handleChat(View view) {

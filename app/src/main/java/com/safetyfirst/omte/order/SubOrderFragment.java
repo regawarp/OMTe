@@ -54,6 +54,6 @@ public class SubOrderFragment extends Fragment {
         tvOrderName.setText("Farhan");
         tvOrderAddress.setText("Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan ");
         tvOrderComplaint.setText("Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan ");
-        tvOrderTag.setText("Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan ");
+        tvOrderTag.setText("Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan ");
     }
 }
