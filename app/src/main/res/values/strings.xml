@@ -14,7 +14,6 @@
     <string name="search">Search</string>
     <string name="search_hint">Search</string>
     <string name="button_to_chat">Button to Chat</string>
-    <string name="sub_fragment_order">Sub Fragment Order</string>
 
     <string name="description_title">Berikan Deskripsi Pelayanan</string>
     <string name="input_rating">Input Rating</string>
@@ -29,6 +28,10 @@
     <string name="order_address">Alamat Pesanan</string>
     <string name="order_tag">Tag</string>
     <string name="transaction">Tahapan Transaksi</string>
+    <string name="sub_fragment_order">Sub Fragment Order</string>
+    <string name="sub_fragment_check_up">Sub Fragment Check Up</string>
+    <string name="sub_fragment_service">Sub Fragment Service</string>
+    <string name="sub_fragment_finish">Sub Fragment Finish</string>
 
     <string-array name="payment_method">
         <item>Cash</item>
