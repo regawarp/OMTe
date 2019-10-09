@@ -66,8 +66,7 @@
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             app:layout_constraintTop_toBottomOf="@id/tv_description_title"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:autofillHints="@string/description_title" />
+            app:layout_constraintRight_toRightOf="parent" />
 
         <Button
             android:id="@+id/btn_rating_input"
