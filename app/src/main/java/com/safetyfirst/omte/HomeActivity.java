@@ -57,11 +57,13 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+//        BottomNavigationView navView = findViewById(R.id.nav_view);
+//        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         if (savedInstanceState == null) {
-            navView.setSelectedItemId(R.id.navigation_home);
+//            navView.setSelectedItemId(R.id.navigation_home);
+            OrderFragment orderFragment = new OrderFragment();
+            openFragment(orderFragment);
         }
     }
 

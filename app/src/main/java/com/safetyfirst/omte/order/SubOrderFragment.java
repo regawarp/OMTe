@@ -21,9 +21,7 @@ import com.safetyfirst.omte.R;
  */
 public class SubOrderFragment extends Fragment {
 
-//    private TextView tvIdrServiceTotal, tvIdrCheckUpCost, tvIdrPriceTotal;
-//    private Spinner spnPaymentMethod;
-//    private Button btnMakePayment;
+
     private TextView tvOrderName, tvOrderAddress, tvOrderComplaint, tvOrderTag;
 
     public SubOrderFragment() {
@@ -36,11 +34,6 @@ public class SubOrderFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sub_order, container, false);
-//        tvIdrServiceTotal = view.findViewById(R.id.tv_idr_service_total);
-//        tvIdrCheckUpCost = view.findViewById(R.id.tv_idr_check_up_cost);
-//        tvIdrPriceTotal = view.findViewById(R.id.tv_idr_price_total);
-//        spnPaymentMethod = view.findViewById(R.id.spn_payment_method);
-//        btnMakePayment = view.findViewById(R.id.btn_make_payment);
         tvOrderName = view.findViewById(R.id.tv_order_name);
         tvOrderAddress = view.findViewById(R.id.tv_order_address);
         tvOrderComplaint = view.findViewById(R.id.tv_order_complaint);
@@ -52,8 +45,15 @@ public class SubOrderFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         tvOrderName.setText("Farhan");
-        tvOrderAddress.setText("Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan ");
-        tvOrderComplaint.setText("Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan ");
+        tvOrderAddress.setText("" +
+                "Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan"
+//                "Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan " +
+                );
+        tvOrderComplaint.setText("" +
+                "Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan "
+//                "Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan "
+        );
         tvOrderTag.setText("Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan ");
+//        tvOrderTag.setText("Tidak ada");
     }
 }

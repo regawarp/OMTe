@@ -32,6 +32,9 @@
     <string name="sub_fragment_check_up">Sub Fragment Check Up</string>
     <string name="sub_fragment_service">Sub Fragment Service</string>
     <string name="sub_fragment_finish">Sub Fragment Finish</string>
+    <string name="check_only">Pemeriksaan Saja</string>
+    <string name="apply_service">Lanjut Servis</string>
+    <string name="total_servis_sparepart">Total Servis + Sparepart</string>
 
     <string-array name="payment_method">
         <item>Cash</item>

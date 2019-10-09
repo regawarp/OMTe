@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatRatingBar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -23,7 +24,7 @@ import com.safetyfirst.omte.R;
 public class SubFinishFragment extends Fragment {
 
     private TextView tvFinishTitle;
-    private RatingBar rbService;
+    private AppCompatRatingBar rbService;
     private EditText edtDescriptionService;
     private Button btnRatingInput;
 

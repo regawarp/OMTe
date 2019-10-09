@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".OrderFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_technician"
@@ -23,6 +27,7 @@
         android:layout_marginStart="8dp"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toRightOf="@id/img_technician"
         app:layout_constraintTop_toTopOf="@id/img_technician"/>
 
@@ -31,9 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/tv_order_code"
+        app:layout_constraintBottom_toTopOf="@id/tv_order_date_time"
         app:layout_constraintLeft_toRightOf="@id/img_technician"/>
 
     <TextView
@@ -47,15 +53,17 @@
 
     <ImageButton
         android:id="@+id/img_btn_chat"
-        android:layout_width="100dp"
-        android:layout_height="64dp"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_technician"
+        app:layout_constraintBottom_toBottomOf="@id/img_technician"
         android:contentDescription="@string/button_to_chat"
-        android:background="@drawable/button_border"/>
+        style="@style/etStyle"/>
+        <!--android:background="@drawable/button_border"/>-->
 
     <View
         android:id="@+id/v_for_line"
@@ -75,94 +83,92 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textSize="12sp"
         app:layout_constraintTop_toBottomOf="@id/v_for_line"
         android:text="@string/transaction"
         tools:text="@string/transaction"/>
 
-    <ImageButton
-        android:id="@+id/img_btn_frag_order"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        app:layout_constraintLeft_toLeftOf="parent"
+    <LinearLayout
+        android:id="@+id/middle_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/transaction_title"
-        android:contentDescription="@string/sub_fragment_order"/>
+        android:orientation="horizontal">
 
-    <View
-        android:id="@+id/v_order_check_up"
-        android:layout_width="42dp"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toTopOf="@id/img_btn_frag_order"
-        app:layout_constraintBottom_toBottomOf="@id/img_btn_frag_order"
-        app:layout_constraintLeft_toRightOf="@id/img_btn_frag_order"
-        app:layout_constraintRight_toLeftOf="@id/img_btn_frag_check_up"/>
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:layout_marginEnd="40dp"-->
+        <ImageButton
+            android:id="@+id/img_btn_frag_order"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:contentDescription="@string/sub_fragment_order"
+            style="@style/etStyle"/>
 
-    <ImageButton
-        android:id="@+id/img_btn_frag_check_up"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        app:layout_constraintLeft_toRightOf="@id/img_btn_frag_order"
-        app:layout_constraintTop_toBottomOf="@id/transaction_title"
-        android:contentDescription="@string/sub_fragment_order"/>
+        <View
+            android:id="@+id/v_order_check_up"
+            android:layout_width="42dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_gravity="center_vertical"/>
 
-    <View
-        android:id="@+id/v_check_up_service"
-        android:layout_width="42dp"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toTopOf="@id/img_btn_frag_order"
-        app:layout_constraintBottom_toBottomOf="@id/img_btn_frag_order"
-        app:layout_constraintLeft_toRightOf="@id/img_btn_frag_check_up"
-        app:layout_constraintRight_toLeftOf="@id/img_btn_frag_service"/>
+        <ImageButton
+            android:id="@+id/img_btn_frag_check_up"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:contentDescription="@string/sub_fragment_check_up"
+            style="@style/etStyle"/>
 
-    <ImageButton
-        android:id="@+id/img_btn_frag_service"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        app:layout_constraintLeft_toRightOf="@id/img_btn_frag_check_up"
-        app:layout_constraintTop_toBottomOf="@id/transaction_title"
-        android:contentDescription="@string/sub_fragment_order"/>
+        <View
+            android:id="@+id/v_check_up_service"
+            android:layout_width="42dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_gravity="center_vertical"/>
 
-    <View
-        android:id="@+id/v_service_finish"
-        android:layout_width="42dp"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toTopOf="@id/img_btn_frag_order"
-        app:layout_constraintBottom_toBottomOf="@id/img_btn_frag_order"
-        app:layout_constraintLeft_toRightOf="@id/img_btn_frag_service"
-        app:layout_constraintRight_toLeftOf="@id/img_btn_frag_finish"/>
+        <ImageButton
+            android:id="@+id/img_btn_frag_service"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:contentDescription="@string/sub_fragment_service"
+            style="@style/etStyle"/>
 
-    <ImageButton
-        android:id="@+id/img_btn_frag_finish"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        app:layout_constraintLeft_toRightOf="@id/img_btn_frag_service"
-        app:layout_constraintTop_toBottomOf="@id/transaction_title"
-        android:contentDescription="@string/sub_fragment_order"/>
+        <View
+            android:id="@+id/v_service_finish"
+            android:layout_width="42dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/img_btn_frag_finish"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:contentDescription="@string/sub_fragment_finish"
+            style="@style/etStyle"/>
+
+    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/frame_sub_frag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/activity_horizontal_margin"
-        app:layout_constraintTop_toBottomOf="@id/img_btn_frag_order">
-    </FrameLayout>
+        android:minHeight="420dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/middle_button"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="@drawable/borderblue"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

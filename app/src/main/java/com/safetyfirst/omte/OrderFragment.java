@@ -62,14 +62,21 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
         Glide.with(view.getContext())
                 .load(R.drawable.ic_launcher_background)
                 .into(imgTechnician);
-        imgButtonOrder.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
-        imgButtonCheckUp.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
-        imgButtonService.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
-        imgButtonFinish.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
+//        imgButtonOrder.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
+//        imgButtonCheckUp.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
+//        imgButtonService.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
+//        imgButtonFinish.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
         imgButtonFinish.setOnClickListener(this);
         imgButtonOrder.setOnClickListener(this);
         imgButtonService.setOnClickListener(this);
-//        imgButtonCheckUp.setOnClickListener(this);
+        imgButtonCheckUp.setOnClickListener(this);
+        if (savedInstanceState == null) {
+            Fragment fragment = new SubOrderFragment();
+            getChildFragmentManager().beginTransaction()
+                    .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
+                    .addToBackStack(fragment.getClass().getSimpleName())
+                    .commit();
+        }
     }
 
     public void handleChat(View view) {
@@ -84,28 +91,28 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.img_btn_frag_order:
                 fragment = new SubOrderFragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
+                getChildFragmentManager().beginTransaction()
                         .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
                         .addToBackStack(fragment.getClass().getSimpleName())
                         .commit();
                 break;
             case R.id.img_btn_frag_check_up:
                 fragment = new SubCheckUpFragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
+                getChildFragmentManager().beginTransaction()
                         .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
                         .addToBackStack(fragment.getClass().getSimpleName())
                         .commit();
                 break;
             case R.id.img_btn_frag_service:
                 fragment = new SubServiceFragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
+                getChildFragmentManager().beginTransaction()
                         .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
                         .addToBackStack(fragment.getClass().getSimpleName())
                         .commit();
                 break;
             case R.id.img_btn_frag_finish:
                 fragment = new SubFinishFragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
+                getChildFragmentManager().beginTransaction()
                         .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
                         .addToBackStack(fragment.getClass().getSimpleName())
                         .commit();
