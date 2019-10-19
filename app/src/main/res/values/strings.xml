@@ -24,4 +24,6 @@
     <string name="teknisi_terdekat">Teknisi Terdekat</string>
     <string name="show_all">Show All</string>
     <string name="sparepart_terbaru">Sparepart Terbaru</string>
+    <string name="title_activity_pilih_alamat">Map</string>
+    <string name="pilih_alamat">Pilih Alamat</string>
 </resources>
