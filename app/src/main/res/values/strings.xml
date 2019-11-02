@@ -35,6 +35,10 @@
     <string name="check_only">Pemeriksaan Saja</string>
     <string name="apply_service">Lanjut Servis</string>
     <string name="total_servis_sparepart">Total Servis + Sparepart</string>
+    <string name="button_order">Button Order</string>
+    <string name="button_check_up">Button Check Up</string>
+    <string name="button_service">Button Service</string>
+    <string name="button_finish">Button Finish</string>
 
     <string-array name="payment_method">
         <item>Cash</item>

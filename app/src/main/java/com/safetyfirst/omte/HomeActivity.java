@@ -2,18 +2,14 @@ package com.safetyfirst.omte;
 
 import android.app.SearchManager;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -57,13 +53,13 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-//        BottomNavigationView navView = findViewById(R.id.nav_view);
-//        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         if (savedInstanceState == null) {
-//            navView.setSelectedItemId(R.id.navigation_home);
-            OrderFragment orderFragment = new OrderFragment();
-            openFragment(orderFragment);
+            navView.setSelectedItemId(R.id.navigation_home);
+//            OrderFragment orderFragment = new OrderFragment();
+//            openFragment(orderFragment);
         }
     }
 

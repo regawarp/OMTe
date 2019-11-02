@@ -2,17 +2,16 @@ package com.safetyfirst.omte;
 
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.safetyfirst.omte.order.SubCheckUpFragment;
@@ -51,10 +50,10 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
         tvOrderDateTime = view.findViewById(R.id.tv_order_date_time);
         imgTechnician = view.findViewById(R.id.img_technician);
         imgButtonChat = view.findViewById(R.id.img_btn_chat);
-        imgButtonOrder = view.findViewById(R.id.img_btn_frag_order);
-        imgButtonCheckUp = view.findViewById(R.id.img_btn_frag_check_up);
-        imgButtonService = view.findViewById(R.id.img_btn_frag_service);
-        imgButtonFinish = view.findViewById(R.id.img_btn_frag_finish);
+        imgButtonOrder = view.findViewById(R.id.img_btn_order);
+        imgButtonCheckUp = view.findViewById(R.id.img_btn_check_up);
+        imgButtonService = view.findViewById(R.id.img_btn_service);
+        imgButtonFinish = view.findViewById(R.id.img_btn_finish);
 
         tvOrderCode.setText("KODE ORDER : 000");
         tvTechicianName.setText("Teknisi X");
@@ -89,28 +88,28 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.img_btn_chat:
                 break;
-            case R.id.img_btn_frag_order:
+            case R.id.img_btn_order:
                 fragment = new SubOrderFragment();
                 getChildFragmentManager().beginTransaction()
                         .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
                         .addToBackStack(fragment.getClass().getSimpleName())
                         .commit();
                 break;
-            case R.id.img_btn_frag_check_up:
+            case R.id.img_btn_check_up:
                 fragment = new SubCheckUpFragment();
                 getChildFragmentManager().beginTransaction()
                         .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
                         .addToBackStack(fragment.getClass().getSimpleName())
                         .commit();
                 break;
-            case R.id.img_btn_frag_service:
+            case R.id.img_btn_service:
                 fragment = new SubServiceFragment();
                 getChildFragmentManager().beginTransaction()
                         .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
                         .addToBackStack(fragment.getClass().getSimpleName())
                         .commit();
                 break;
-            case R.id.img_btn_frag_finish:
+            case R.id.img_btn_finish:
                 fragment = new SubFinishFragment();
                 getChildFragmentManager().beginTransaction()
                         .replace(R.id.frame_sub_frag, fragment, fragment.getClass().getSimpleName())
