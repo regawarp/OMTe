@@ -1,8 +1,11 @@
 package com.safetyfirst.omte.model;
 
+import com.google.firebase.firestore.GeoPoint;
+
 public class Technician {
     private String techId;
     private String techName;
+    private GeoPoint techLatLong;
     private String techEmail;
     private String techPhone;
     private boolean techAvailability;
@@ -38,5 +41,9 @@ public class Technician {
 
     public String getTechPicture() {
         return techPicture;
+    }
+
+    public GeoPoint getTechLatLong() {
+        return techLatLong;
     }
 }
