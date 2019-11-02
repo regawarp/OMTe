@@ -28,7 +28,7 @@ public class SubCheckUpFragment extends Fragment {
     private RecyclerView rvBrokenPart, rvSparepart;
     private TextView tvIdrServiceTotal, tvIdrCheckUpCost, tvIdrPriceTotal;
     private Spinner spnPaymentMethod;
-    private Button btnMakePayment;
+    private Button btnCheckOnly, btnApplyService;
 
     private SparepartAdapter sparepartAdapter;
     private BrokenPartAdapter brokenPartAdapter;
@@ -52,7 +52,9 @@ public class SubCheckUpFragment extends Fragment {
         tvIdrCheckUpCost = view.findViewById(R.id.tv_idr_check_up_cost);
         tvIdrPriceTotal = view.findViewById(R.id.tv_idr_price_total);
         spnPaymentMethod = view.findViewById(R.id.spn_payment_method);
-        btnMakePayment = view.findViewById(R.id.btn_make_payment);
+        btnCheckOnly = view.findViewById(R.id.btn_check_only);
+        btnApplyService = view.findViewById(R.id.btn_apply_service);
+
         return view;
     }
 
@@ -75,6 +77,20 @@ public class SubCheckUpFragment extends Fragment {
         tvIdrServiceTotal.setText("Rp. 105000");
         tvIdrCheckUpCost.setText("Rp. 10000");
         tvIdrPriceTotal.setText("Rp. 115000");
+
+        btnCheckOnly.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnApplyService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     private void setSpareparts() {

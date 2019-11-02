@@ -59,7 +59,7 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
         tvTechicianName.setText("Teknisi X");
         tvOrderDateTime.setText("Waktu Order : 17/09/2019 13:00");
         Glide.with(view.getContext())
-                .load(R.drawable.ic_launcher_background)
+                .load(R.mipmap.ic_launcher)
                 .into(imgTechnician);
 //        imgButtonOrder.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
 //        imgButtonCheckUp.setImageDrawable(view.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));

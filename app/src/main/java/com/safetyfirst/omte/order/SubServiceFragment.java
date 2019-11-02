@@ -59,5 +59,12 @@ public class SubServiceFragment extends Fragment {
         tvIdrServiceTotal.setText("Rp. 75.000");
         tvIdrCheckUpCost.setText("Rp. 10.000");
         tvIdrPriceTotal.setText("Rp. 85.000");
+
+        btnMakePayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

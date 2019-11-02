@@ -39,6 +39,11 @@
     <string name="button_check_up">Button Check Up</string>
     <string name="button_service">Button Service</string>
     <string name="button_finish">Button Finish</string>
+    <string name="button_chat">Button Chat</string>
+    <string name="kerusakan">Kerusakan</string>
+    <string name="biaya_servis">Biaya Servis</string>
+    <string name="name_sparepart">Name Sparepart</string>
+    <string name="biaya_sparepart">Biaya Sparepart</string>
 
     <string-array name="payment_method">
         <item>Cash</item>

@@ -50,7 +50,8 @@ public class SubOrderFragment extends Fragment {
 //                "Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan "
                 "Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan "
         );
-        tvOrderTag.setText("Pemeriksaan KendaraanPemeriksaan");
+        tvOrderTag.setText("Pemeriksaan KendaraanPemeriksaan" +
+                "Pemeriksaan KendaraanPemeriksaan");
 //        tvOrderTag.setText("Tidak ada");
     }
 }

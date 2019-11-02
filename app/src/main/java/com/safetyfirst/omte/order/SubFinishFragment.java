@@ -48,5 +48,12 @@ public class SubFinishFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         String technisian = "Teknisi X";
         tvFinishTitle.setText("Berikan Rating Terhadap " + technisian);
+
+        btnRatingInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

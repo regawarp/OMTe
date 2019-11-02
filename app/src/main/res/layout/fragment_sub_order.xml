@@ -2,15 +2,17 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
     android:isScrollContainer="false"
-    tools:context=".order.SubOrderFragment">
+    tools:context=".order.SubOrderFragment"
+    android:paddingBottom="60dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin">
+        android:layout_margin="@dimen/margin"
+        android:orientation="vertical"
+        android:paddingBottom="60dp">
 
         <TextView
             android:id="@+id/tv_order_name_title"
@@ -18,23 +20,16 @@
             android:layout_height="wrap_content"
             android:text="@string/order_name"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tv_order_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_order_name_title"
-            app:layout_constraintLeft_toLeftOf="@id/tv_order_name_title"
             tools:text="Farhan"/>
 
         <TextView
@@ -43,23 +38,16 @@
             android:layout_height="wrap_content"
             android:text="@string/order_address"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_order_name"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_order_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:textSize="16sp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_order_address_title"
-            app:layout_constraintLeft_toLeftOf="@id/tv_order_address_title"
             tools:text="Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan "/>
 
         <TextView
@@ -68,23 +56,16 @@
             android:layout_height="wrap_content"
             android:text="@string/order_complaint"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_order_address"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tv_order_complaint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:textSize="16sp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_order_complaint_title"
-            app:layout_constraintLeft_toLeftOf="@id/tv_order_complaint_title"
             tools:text="Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan "/>
 
         <TextView
@@ -93,24 +74,15 @@
             android:layout_height="wrap_content"
             android:text="@string/order_tag"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_order_complaint"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tv_order_tag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_order_tag_title"
-            app:layout_constraintLeft_toLeftOf="@id/tv_order_tag_title"
             tools:text="Pemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan KendaraanPemeriksaan "/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

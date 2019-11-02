@@ -4,23 +4,26 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal|center_vertical"
     android:weightSum="2">
 
     <TextView
         android:id="@+id/tv_sparepart"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="start"
+        android:textSize="16sp"
         tools:text="Sparepart X"/>
 
     <TextView
         android:id="@+id/tv_idr_sparepart"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:textAlignment="viewEnd"
+        android:gravity="end"
+        android:textSize="16sp"
         tools:text="Rp. 15.000"/>
 
 </LinearLayout>
