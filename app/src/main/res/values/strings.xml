@@ -26,4 +26,8 @@
     <string name="sparepart_terbaru">Sparepart Terbaru</string>
     <string name="title_activity_pilih_alamat">Map</string>
     <string name="pilih_alamat">Pilih Alamat</string>
+    <string name="map">Map</string>
+    <string name="list">List</string>
+    <string name="click_to_see_details">Click to see Details</string>
+    <string name="pilih_teknisi">Pilih Teknisi</string>
 </resources>

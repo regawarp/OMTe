@@ -29,7 +29,7 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     private RecyclerView rvSparepart;
     private ArrayList<Technician> technicianArrayList = new ArrayList<>();
-    private ArrayList<Sparepart> sparepartArrayListe = new ArrayList<>();
+    private ArrayList<Sparepart> sparepartArrayList = new ArrayList<>();
     TechicianGridAdapter techicianGridAdapter;
     ExpandableHeightGridView gridTechnician;
 
@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
         initializeData();
 
         LinearLayoutManager layoutManager1 = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
-        SparepartAdapter sparepartAdapter = new SparepartAdapter(getContext(), sparepartArrayListe);
+        SparepartAdapter sparepartAdapter = new SparepartAdapter(getContext(), sparepartArrayList);
         rvSparepart.setAdapter(sparepartAdapter);
         rvSparepart.setLayoutManager(layoutManager1);
 
@@ -84,10 +84,10 @@ public class HomeFragment extends Fragment {
     private void initializeData() {
         technicianArrayList.add(new Technician("1", "Regawa"));
         technicianArrayList.add(new Technician("2", "Rama"));
-        sparepartArrayListe.add(new Sparepart("Honda X23", "Rantai", 10000));
-        sparepartArrayListe.add(new Sparepart("Kit", "Fairing", 15000));
-        sparepartArrayListe.add(new Sparepart("Takuta 23", "Ban", 20000));
-        sparepartArrayListe.add(new Sparepart("RoadFighter", "Knalpot", 90000));
+        sparepartArrayList.add(new Sparepart("Honda X23", "Rantai", 10000));
+        sparepartArrayList.add(new Sparepart("Kit", "Fairing", 15000));
+        sparepartArrayList.add(new Sparepart("Takuta 23", "Ban", 20000));
+        sparepartArrayList.add(new Sparepart("RoadFighter", "Knalpot", 90000));
     }
 
 }
