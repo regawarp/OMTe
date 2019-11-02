@@ -26,8 +26,6 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.safetyfirst.omte.model.Technician;
 
-import java.util.ArrayList;
-
 
 /**
  * A simple {@link Fragment} subclass.
