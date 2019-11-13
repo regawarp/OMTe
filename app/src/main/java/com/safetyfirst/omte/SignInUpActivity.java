@@ -27,7 +27,7 @@ public class SignInUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in_up);
 
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, HomeActivity.class));
             this.finish();
         }
     }
@@ -61,7 +61,7 @@ public class SignInUpActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(this, "Welcome back again", Toast.LENGTH_SHORT).show();
                 }
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, HomeActivity.class);
                 startActivity(intent);
                 this.finish();
             } else {

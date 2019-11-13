@@ -1,10 +1,12 @@
 package com.safetyfirst.omte;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,6 +34,7 @@ public class HomeFragment extends Fragment {
     private ArrayList<Sparepart> sparepartArrayList = new ArrayList<>();
     TechicianGridAdapter techicianGridAdapter;
     ExpandableHeightGridView gridTechnician;
+    private Button btnReparasiMotor;
 
     public HomeFragment() {
 
@@ -53,6 +56,8 @@ public class HomeFragment extends Fragment {
 
         //GridView
         gridTechnician = view.findViewById(R.id.grid_teknisi_terdekat);
+
+        btnReparasiMotor = view.findViewById(R.id.btn_reparasi_motor);
         return view;
     }
 
@@ -79,6 +84,14 @@ public class HomeFragment extends Fragment {
         techicianGridAdapter = new TechicianGridAdapter(getContext(), R.id.tv_tech_name, technicianArrayList);
         gridTechnician.setAdapter(techicianGridAdapter);
         gridTechnician.setExpanded(true);
+
+        btnReparasiMotor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),FormKeluhan.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initializeData() {

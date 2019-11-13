@@ -1,75 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FormKeluhan"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/formkel_nama"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".FormKeluhan">
 
-    <EditText
-        android:id="@+id/etNama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nama"
-        style="@style/etStyle"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/formkel_nama" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/formkel_alamat"
-        android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/etNama"
+            style="@style/etStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama" />
 
-    <EditText
-        android:id="@+id/etAlamat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Alamat"
-        style="@style/etStyle"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/formkel_alamat" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/formkel_desc"
-        android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/et_alamat"
+            style="@style/etStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat" />
 
-    <EditText
-        android:inputType="textMultiLine"
-        android:lines="8"
-        android:gravity="top|left"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        android:hint="Deskripsikan Keluhan Anda"
-        style="@style/etStyle"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/formkel_desc" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/formkel_tag"
-        android:layout_marginTop="20dp"/>
+        <EditText
+            style="@style/etStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:hint="Deskripsikan Keluhan Anda"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:scrollbars="vertical" />
 
-    <EditText
-        android:id="@+id/etTag"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tag"
-        style="@style/etStyle"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/formkel_tag" />
 
-    <Button
-        android:id="@+id/btnSubmitKeluhan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btnSubmitKeluhan"
-        style="@style/btnStyleBlue"
-        android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/etTag"
+            style="@style/etStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tag" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_submit_keluhan"
+            style="@style/btnStyleBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/btnSubmitKeluhan" />
+
+    </LinearLayout>
+</ScrollView>

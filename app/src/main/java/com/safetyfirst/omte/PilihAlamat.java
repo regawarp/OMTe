@@ -1,8 +1,11 @@
 package com.safetyfirst.omte;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.fragment.app.FragmentActivity;
@@ -22,6 +25,7 @@ public class PilihAlamat extends FragmentActivity implements OnMapReadyCallback,
 
     private GoogleMap mMap;
     private TextView tvAlamat, tvLatLong;
+    private Button btnPilihAlamat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,14 @@ public class PilihAlamat extends FragmentActivity implements OnMapReadyCallback,
         setContentView(R.layout.activity_pilih_alamat);
         tvAlamat = findViewById(R.id.tv_alamat);
         tvLatLong = findViewById(R.id.tv_lat_long);
+        btnPilihAlamat = findViewById(R.id.btn_pilih_alamat);
+
+        btnPilihAlamat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
