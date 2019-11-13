@@ -30,4 +30,41 @@
     <string name="list">List</string>
     <string name="click_to_see_details">Click to see Details</string>
     <string name="pilih_teknisi">Pilih Teknisi</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Search</string>
+    <string name="button_to_chat">Button to Chat</string>
+
+    <string name="description_title">Berikan Deskripsi Pelayanan</string>
+    <string name="input_rating">Input Rating</string>
+    <string name="price_detail">Detail Harga</string>
+    <string name="service_total">Total Servis</string>
+    <string name="check_up_cost">Biaya Pengecekan</string>
+    <string name="payment_method">Metode Pembayaran</string>
+    <string name="make_payment">Lakukan Pembayaran</string>
+    <string name="price_total">Total Harga</string>
+    <string name="order_name">Nama Pemesan</string>
+    <string name="order_complaint">Keluhan</string>
+    <string name="order_address">Alamat Pesanan</string>
+    <string name="order_tag">Tag</string>
+    <string name="transaction">Tahapan Transaksi</string>
+    <string name="sub_fragment_order">Sub Fragment Order</string>
+    <string name="sub_fragment_check_up">Sub Fragment Check Up</string>
+    <string name="sub_fragment_service">Sub Fragment Service</string>
+    <string name="sub_fragment_finish">Sub Fragment Finish</string>
+    <string name="check_only">Pemeriksaan Saja</string>
+    <string name="apply_service">Lanjut Servis</string>
+    <string name="total_servis_sparepart">Total Servis + Sparepart</string>
+    <string name="button_order">Button Order</string>
+    <string name="button_check_up">Button Check Up</string>
+    <string name="button_service">Button Service</string>
+    <string name="button_finish">Button Finish</string>
+    <string name="button_chat">Button Chat</string>
+    <string name="kerusakan">Kerusakan</string>
+    <string name="biaya_servis">Biaya Servis</string>
+    <string name="name_sparepart">Name Sparepart</string>
+    <string name="biaya_sparepart">Biaya Sparepart</string>
+
+    <string-array name="payment_method">
+        <item>Cash</item>
+    </string-array>
 </resources>

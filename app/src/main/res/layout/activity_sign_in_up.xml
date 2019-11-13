@@ -7,18 +7,18 @@
     tools:context="com.safetyfirst.omte.SignInUpActivity">
 
     <TextView
-        android:id="@+id/tvAppName"
+        android:id="@+id/tv_app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="32sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/imgAppImage"
+        app:layout_constraintBottom_toTopOf="@id/img_app_image"
         tools:text="@string/app_name"/>
 
     <ImageView
-        android:id="@+id/imgAppImage"
+        android:id="@+id/img_app_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_logo"
@@ -29,13 +29,13 @@
         app:layout_constraintRight_toRightOf="parent"/>
 
     <Button
-        android:id="@+id/btnSignInUp"
+        android:id="@+id/btn_sign_in_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_in_sign_up"
         android:textSize="20sp"
         android:onClick="handleSignInSignUp"
-        app:layout_constraintTop_toBottomOf="@id/imgAppImage"
+        app:layout_constraintTop_toBottomOf="@id/img_app_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

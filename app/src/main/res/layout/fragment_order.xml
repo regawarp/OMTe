@@ -1,14 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".OrderFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/title_order" />
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:orientation="horizontal"
+        android:weightSum="4">
 
-</FrameLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_technician"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                tools:text="ORDER CODE"/>
+
+            <TextView
+                android:id="@+id/tv_technician_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="TECHNICIAN NAME"/>
+                
+            <TextView
+                android:id="@+id/tv_order_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="ORDER DATE TIME"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/img_btn_chat"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_button_chat"
+            tools:src="@drawable/ic_button_chat"
+            android:background="@color/colorWhite"
+            android:contentDescription="@string/button_chat"/>
+        
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_for_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/transaction_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textSize="12sp"
+        android:text="@string/transaction"
+        tools:text="@string/transaction"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="11">
+
+        <ImageButton
+            android:id="@+id/img_btn_order"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/ic_sub_order"
+            tools:src="@drawable/ic_sub_order"
+            android:background="@color/colorWhite"
+            android:contentDescription="@string/button_order"/>
+
+        <View
+            android:id="@+id/v_order_check_up"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageButton
+            android:id="@+id/img_btn_check_up"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/ic_check_up"
+            tools:src="@drawable/ic_check_up"
+            android:background="@color/colorWhite"
+            android:contentDescription="@string/button_check_up"/>
+
+        <View
+            android:id="@+id/v_check_up_service"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageButton
+            android:id="@+id/img_btn_service"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/ic_service"
+            tools:src="@drawable/ic_service"
+            android:background="@color/colorWhite"
+            android:contentDescription="@string/button_service"/>
+
+        <View
+            android:id="@+id/v_service_finish"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageButton
+            android:id="@+id/img_btn_finish"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/ic_finish"
+            tools:src="@drawable/ic_finish"
+            android:background="@color/colorWhite"
+            android:contentDescription="@string/button_finish"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_sub_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"/>
+
+</LinearLayout>
