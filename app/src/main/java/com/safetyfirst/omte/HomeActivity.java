@@ -1,6 +1,5 @@
 package com.safetyfirst.omte;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomeActivity extends AppCompatActivity implements OrderFragment.OnFragmentInteractionListener {
+public class HomeActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private EditText etSearch;
 
@@ -60,8 +59,8 @@ public class HomeActivity extends AppCompatActivity implements OrderFragment.OnF
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
-
+    public void onBackPressed() {
+        //do nothing
     }
 
     public void setCustomActionBar() {
@@ -79,7 +78,7 @@ public class HomeActivity extends AppCompatActivity implements OrderFragment.OnF
             public void onFocusChange(View v, boolean hasFocus) {
                 if (hasFocus) {
                     etSearch.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-                }else{
+                } else {
                     etSearch.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_launcher_round, 0);
                 }
             }

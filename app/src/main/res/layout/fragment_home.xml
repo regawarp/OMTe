@@ -49,7 +49,7 @@
             android:id="@+id/btn_beli_sparepart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1CA245"
+            style="@style/btnStyleGreen"
             android:drawableStart="@drawable/ic_cart_24dp"
             android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
             android:drawablePadding="5dp"
